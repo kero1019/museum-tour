@@ -26,24 +26,22 @@ body > div:first-of-type {
 /* Start Home Page */
 .home {
   background-color: var(--home);
-  display: flex;
-  justify-items: center;
-  align-items: center;
+  padding-bottom: 50px;
 }
 .all-cards{
   background-color: var(--background);
+  font-size: 22px;
 }
-.home .container p{
+.home .container > p{
   font-size: 30px;
   font-weight: bold;
-  margin-right: 30px;
 }
 @media (max-width: 575px){
   .home{
     padding: 20px;
   }
   .card{
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 50px;
     background-color: var(--image-background);
   }
@@ -51,3 +49,17 @@ body > div:first-of-type {
     padding: 10px;
   }
 } 
+@media (min-width:768px){
+  .home .container .all-cards .card{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+  .home .container .all-cards{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+  }
+}
