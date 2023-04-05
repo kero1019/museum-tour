@@ -1,0 +1,53 @@
+/*
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px 
+ */
+/* Start General Roles */
+:root {
+  --home: #EABF9F;
+  --main-color: #B68973;
+  --background: #FAF3E0;
+  --image-background: #FFFFFF;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  direction: rtl;
+  font-size: 20px;
+}
+
+body > div:first-of-type {
+  min-height: 100vh;
+}
+/* End General Roles */
+/* Start Home Page */
+.home {
+  background-color: var(--home);
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.all-cards{
+  background-color: var(--background);
+}
+.home .container p{
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+@media (max-width: 575px){
+  .home{
+    padding: 20px;
+  }
+  .card{
+    padding: 10px;
+    margin-bottom: 50px;
+    background-color: var(--image-background);
+  }
+  .all-cards{
+    padding: 10px;
+  }
+} 
