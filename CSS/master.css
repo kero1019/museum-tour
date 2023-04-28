@@ -7,59 +7,143 @@
  */
 /* Start General Roles */
 :root {
-  --home: #EABF9F;
-  --main-color: #B68973;
-  --background: #FAF3E0;
-  --image-background: #FFFFFF;
+	--home: #eabf9f;
+	--main-color: #b68973;
+	--background: #faf3e0;
+	--image-background: #ffffff;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  direction: rtl;
-  font-size: 20px;
+* {
+	font-family: "Poppins", sans-serif;
+	direction: rtl;
+  font-weight: 700;
 }
 
 body > div:first-of-type {
-  min-height: 100vh;
+	min-height: 100vh;
 }
 /* End General Roles */
 /* Start Home Page */
 .home {
-  background-color: var(--home);
-  padding-bottom: 50px;
+	background-color: var(--home);
+	padding-bottom: 50px;
 }
-.all-cards{
+.all-cards {
+	background-color: var(--background);
+	font-size: 22px;
+}
+.home .container > p {
+	font-size: 30px;
+	font-weight: bold;
+}
+@media (max-width: 575px) {
+	.home {
+		padding: 20px;
+	}
+	.card {
+		padding: 20px;
+		margin-bottom: 50px;
+		background-color: var(--image-background);
+	}
+	.all-cards {
+		padding: 10px;
+	}
+}
+@media (min-width: 768px) {
+	.home .container .all-cards .card {
+		padding-top: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		text-align: center;
+	}
+	.home .container .all-cards {
+		padding: 20px;
+		display: grid;
+		grid-template-columns: auto auto auto;
+		gap: 20px;
+	}
+}
+/* End Home Page */
+/* Start الملك تحتمس الثالث */
+.pages-background {
   background-color: var(--background);
+  position: relative;
+  z-index: 0;
+}
+.pages-background::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 90%;
+  height: 100%;
+  background-color: var(--main-color);
+  left: 50%;
+  transform: translate(-50%);
+}
+.pages-background .container {
+  height: 100vh;
+}
+.title {
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 700;
+}
+.page-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.page-contents p {
   font-size: 22px;
+  padding: 0 20px;
 }
-.home .container > p{
-  font-size: 30px;
-  font-weight: bold;
+.page-contents img {
+  width: 280px;
 }
-@media (max-width: 575px){
-  .home{
-    padding: 20px;
+@media (min-width: 768px) {
+  .page-contents {
+    flex-direction: row;
+    height: 100%;
   }
-  .card{
-    padding: 20px;
-    margin-bottom: 50px;
-    background-color: var(--image-background);
+  .pages-background .container {
+    display: flex;
+    flex-direction: column;
   }
-  .all-cards{
-    padding: 10px;
+  .pages-background::before {
+    width: 100%;
+    height: 40%;
+    top: 50%;
+    transform: translate(-50%,-25%);
   }
-} 
-@media (min-width:768px){
-  .home .container .all-cards .card{
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
+  .page-contents p {
+    padding: 0;
+    font-size: 26px;
   }
-  .home .container .all-cards{
-    padding: 20px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 20px;
+  .page-contents img {
+    width: 340px;
+    height: 250px;
   }
 }
+@media (min-width: 992px) {
+  .page-contents p {
+    padding: 0;
+    font-size: 30px;
+  }
+  .page-contents img {
+    width: 480px;
+    height: 300px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-contents {
+    justify-content: flex-start;
+    gap: 50px;
+  }
+  .page-contents img {
+    width: 550px;
+    height: 300px;
+  }
+}
+/* End الملك تحتمس الثالث */
