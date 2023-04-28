@@ -71,7 +71,19 @@ p {
 	}
 }
 /* End Home Page */
-/* Start الملك تحتمس الثالث */
+/* Start audio */
+.dodo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;  
+}
+@media (min-width: 768px) {
+  .dodo {
+    flex-direction: row;
+  }
+}
+/* End audio */
+/* Start template */
 .pages-background {
   background-color: var(--background);
   position: relative;
@@ -153,4 +165,4 @@ p {
     height: 300px;
   }
 }
-/* End الملك تحتمس الثالث */
+/* End template */
